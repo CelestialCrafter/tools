@@ -8,6 +8,12 @@
       devShells.x86_64-linux.default = pkgs.mkShell {
         packages = with pkgs; [
           go
+
+          ninja
+		  clang
+		  libmpdclient
+		  curl
+		  tomlc99
         ];
       };
     };

@@ -1,0 +1,8 @@
+cflags = -Wall
+ldflags = -lmpdclient -ltoml
+
+rule cc
+    command = cc $cflags $in -o $out $ldflags
+
+build lyricizer.out: cc src/main.c
+default lyricizer.out
