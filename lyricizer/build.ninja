@@ -2,7 +2,14 @@ cflags = -Wall
 ldflags = -lmpdclient -ltoml
 
 rule cc
-    command = cc $cflags $in -o $out $ldflags
+    command = cc $cflags -c $in -o $out
 
-build lyricizer.out: cc src/main.c
-default lyricizer.out
+rule link
+    command = cc $in -o $out $ldflags
+
+build build/options.o: cc src/options.c
+build build/mpd.o: cc src/mpd.c
+build build/main.o: cc src/main.c
+build build/lyricizer: link build/main.o build/mpd.o build/options.o
+
+default build/lyricizer
