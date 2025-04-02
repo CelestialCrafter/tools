@@ -1,4 +1,4 @@
-module github.com/CelestialCrafter/dotfiles-fetch
+module github.com/CelestialCrafter/fetch
 
 go 1.22.5
 
