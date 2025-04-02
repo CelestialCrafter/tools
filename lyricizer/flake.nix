@@ -22,7 +22,7 @@
 
         meta = {
           description = "downloads lyrics for songs in mpd";
-          homepage = "https://github.com/CelestialCrafter/lyricizer";
+          homepage = "https://github.com/CelestialCrafter/tools";
           license = pkgs.lib.licenses.mpl20;
         };
       };
